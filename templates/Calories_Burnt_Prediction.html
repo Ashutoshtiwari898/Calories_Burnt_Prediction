@@ -21,45 +21,42 @@
 
   <!-- Navigation -->
   <nav class="nav-bar">
-    <div class="container nav-container">
-      <div class="logo">🔥 FitAI</div>
-      <h1 class="title">Predict Your <span class="highlight">Calories Burnt</span></h1>
-      <p class="subtitle">Advanced AI-powered predictions for your workouts.</p>
-    </div>
-  </nav>
-
-
-  <!-- Carousel -->
-  <div id="fitnessCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://c8.alamy.com/comp/DKB901/weightlifter-in-dark-gym-bench-press-DKB901.jpg"
-          class="d-block w-100" alt="Fitness Image">
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww"
-          class="d-block w-100" alt="Treadmill Image">
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGd5bXxlbnwwfHwwfHx8MA%3D%3D"
-          class="d-block w-100" alt="Dumbbell Image">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#fitnessCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#fitnessCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+  <div class="container nav-container">
+    <div class="logo">⚡ Calories_Burnt_Prediction</div>
+    <h1 class="title">Turn Sweat into <span class="highlight">Smart Insights</span></h1>
   </div>
+</nav>
 
-  <!-- Prediction Form -->
-  <div class="container form-container">
-    <h2 class="form-title">Enter Your Details</h2>
+
+
+  <!-- Main Content Section -->
+  <div class="main-content container">
+    <!-- Carousel -->
+    <div id="fitnessCarousel" class="carousel slide carousel-left" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='images/Dumble.jpg') }}" class="d-block w-100" alt="Dumbbell Image">
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/fit.jpg') }}" class="d-block w-100" alt="Fitness Image">
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/trademil.jpg') }}" class="d-block w-100" alt="Treadmill Image">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#fitnessCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#fitnessCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Prediction Form -->
+    <div class="form-container form-right">
+      <h2 class="form-title">Enter Your Details</h2>
     <form action="/predict" method="post">
       <div class="input-group">
         <label for="gender">Gender (0 = Male, 1 = Female)</label>
@@ -94,12 +91,13 @@
     {% if pred %}
     <h3 class="result">🔥 {{ pred }}</h3>
     {% endif %}
+    </div>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>Powered by <span class="highlight">FitAI</span></p>
+      <p>Made by <a href="https://github.com/Ashutoshtiwari898/Calories_Burnt_Prediction" target="_blank" class="highlight">Ashutosh</a></p>
     </div>
   </footer>
 
